@@ -1,2 +1,3 @@
-# pythoncuriosa
-Mit Python die Welt entdecken
+# Python Curiosa
+
+Mit Python die Welt entdecken (für Neugierige)
