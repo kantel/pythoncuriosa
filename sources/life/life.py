@@ -35,7 +35,7 @@ def update(frameNum, img, grid, N):
     return img, 
 
 glider = False
-updateInterval = 500
+updateInterval = 50
 colormap = "viridis"
 
 grid = np.array([])
