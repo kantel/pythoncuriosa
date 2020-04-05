@@ -1,3 +1,3 @@
 # Python Curiosa
 
-Mit Python die Welt entdecken (für Neugierige)
+Mit Python die Welt entdecken. Programmieren für Neugierige.
