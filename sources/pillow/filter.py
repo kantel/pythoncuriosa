@@ -8,7 +8,7 @@ im_path = os.path.join("images", "sechseck.jpg")
 im = Image.open(im_path)
 
 # Mögliche vordefinierte Filter sind BLUR, CONTOUR, DETAIL, EDGE_ENHANCED,
-# EDGE_ENHANCED_MORE, EMBOS, FIND_EDGES, SHARPEN, SMOOTH, SMOOTH_MORE
-filter_im = im.filter(ImageFilter.CONTOUR)
+# EDGE_ENHANCED_MORE, EMBOSS, FIND_EDGES, SHARPEN, SMOOTH, SMOOTH_MORE
+filter_im = im.filter(ImageFilter.EMBOSS)
 
 filter_im.show()
