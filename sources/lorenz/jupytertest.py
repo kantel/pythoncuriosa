@@ -1,6 +1,5 @@
-# %%
-msg = "Hello World"
-print(msg)
+# %% [markdown]
+# Jupyter in VS Code
 
 # %%
 msg = "Hallo Jörg"
