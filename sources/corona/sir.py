@@ -29,9 +29,9 @@ S, I, R = ret.T
 plots = plt.plot(T, S, "b", lw = 2, label = "Susceptible") \
     + plt.plot(T, I, "r", lw = 2, label = "Infected") \
     + plt.plot(T, R, "g", lw = 2, label = "Recovered/Removed")
-plt.title("Coronavirus-Kurve")
-# plt.title("Flatten the Curve")
+plt.title("S-I-R-Modell")
 plt.xlabel("Zeit [Tage]")
 plt.ylabel("Anzahl")
 plt.legend(loc = "upper right")
+
 plt.show()
