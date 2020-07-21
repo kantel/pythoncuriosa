@@ -58,3 +58,5 @@ print("Die Länge des Vektors a ist %5.2f" %mag(a))
 print("Die Länge des Vektors b ist %5.2f" %mag(b))
 print("Der Winkel zwischen a und b in Radians ist %5.2f" %angle_between(a, b))
 print("Der Winkel zwischen a und b in Grad ist %0.0f" %angle_between(a, b, degrees = True))
+
+plt.show()
