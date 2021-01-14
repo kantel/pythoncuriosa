@@ -34,7 +34,6 @@ def mandelbrot(size, maxiter, maxlimit):
                                int(255*(1+math.cos(0.412*log_iter))/2))
     return(m)
 
-
 pixels = mandelbrot(size, maxiter, maxlimit)
 
 plt.imshow(pixels)
