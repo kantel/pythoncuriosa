@@ -12,9 +12,9 @@ top    = -0.5  # 1.5 -0.5
 
 size = 600
 maxlimit = 4.0
-maxiter = 1000
+maxiter = 100
 
-@nb.njit(locals = dict(c = nb.complex128, z = nb.complex128))
+# @nb.njit(locals = dict(c = nb.complex128, z = nb.complex128))
 def mandelbrot(size, maxiter, maxlimit):
     m = [[(0, 0, 0) for j in range(size)] for i in range(size)]
     for y in range(size):
@@ -52,4 +52,4 @@ root.title("Mandelbrot Set")
 canvas = FigureCanvasTkAgg(fig, master = root)
 canvas._tkcanvas.pack(side = tk.TOP, fill = tk.BOTH, expand = 1)
 
-root.mainloop()
+# root.mainloop()
