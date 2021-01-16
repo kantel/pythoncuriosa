@@ -5,14 +5,14 @@ import numpy as np
 import numba as nb
 import math
 
-left   = -2.25 # -2.25 -0.25
-right  = 0.75  # 0.75 0.25
-bottom = -1.5  # -1.5 -1.0
-top    = 1.5  # 1.5 -0.5
+left   = -0.25 # -2.25 -0.25
+right  = 0.25  # 0.75 0.25
+bottom = -1.0  # -1.5 -1.0
+top    = -0.5  # 1.5 -0.5
 
 size = 600
 maxlimit = 4.0
-maxiter = 100
+maxiter = 1000
 
 @nb.njit(locals = dict(c = nb.complex128, z = nb.complex128))
 def mandelbrot(size, maxiter, maxlimit):
@@ -31,9 +31,8 @@ def mandelbrot(size, maxiter, maxlimit):
                     m[x][y] = (0, 0, 0)
                 else:
                     log_iter = math.log(i)
-                    m[x][y] = (int(255*(1+math.cos(3.32*log_iter))/2),
-                               int(255*(1+math.cos(0.774*log_iter))/2),
-                               int(255*(1+math.cos(0.412*log_iter))/2))
+                    # m[x][y] = (int(i%17*16), int(i%9*32), int(i%5*64))
+                    m[x][y] = (int(i%5*64), int(i%17*16), int(i%9*32))
     return(m)
 
 pixels = mandelbrot(size, maxiter, maxlimit)
