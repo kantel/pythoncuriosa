@@ -1,8 +1,13 @@
 # Newton fractals
 from PIL import Image
+import os
+
 imgx = 512
 imgy = 512
 image = Image.new("RGB", (imgx, imgy))
+
+file_path = os.path.dirname(os.path.abspath(__file__))
+image_folder = os.path.join(file_path, "images")
 
 # drawing area
 xa = -1.0
@@ -36,4 +41,4 @@ for y in range(imgy):
         image.putpixel((x, y), (i % 5 * 64, i % 17 * 16, i % 9 * 32))
 
 image.show()
-image.save("newtonFractal.png", "PNG")
+image.save(os.path.join(image_folder, "newtonFractal2.png"), "PNG")

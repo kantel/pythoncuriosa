@@ -3,7 +3,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 import tkinter as tk
 import numpy as np
 import numba as nb
-import math
+import math, os
 
 left   = -0.25 # -2.25 -0.25
 right  = 0.25  # 0.75 0.25
@@ -14,7 +14,10 @@ size = 600
 maxlimit = 4.0
 maxiter = 100
 
-# @nb.njit(locals = dict(c = nb.complex128, z = nb.complex128))
+file_path = os.path.dirname(os.path.abspath(__file__))
+image_folder = os.path.join(file_path, "images")
+
+@nb.njit(locals = dict(c = nb.complex128, z = nb.complex128))
 def mandelbrot(size, maxiter, maxlimit):
     m = [[(0, 0, 0) for j in range(size)] for i in range(size)]
     for y in range(size):
@@ -46,10 +49,12 @@ axis.tick_params(labelleft = False)
 axis.tick_params(bottom = False)
 axis.tick_params(left = False)
 
+fig.savefig(os.path.join(image_folder, "mandelbrot_ausschnitt.png"), bbox_inches = "tight", pad_inches = 0.0)
+
 root = tk.Tk()
 root.title("Mandelbrot Set")
 
 canvas = FigureCanvasTkAgg(fig, master = root)
 canvas._tkcanvas.pack(side = tk.TOP, fill = tk.BOTH, expand = 1)
 
-# root.mainloop()
+root.mainloop()

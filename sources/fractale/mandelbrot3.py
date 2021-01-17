@@ -37,4 +37,5 @@ def mandelbrot(size, maxiter, maxlimit):
 pixels = mandelbrot(size, maxiter, maxlimit)
 
 plt.imshow(pixels)
+plt.savefig("mandel.png", bbox_inches = "tight")
 plt.show()
