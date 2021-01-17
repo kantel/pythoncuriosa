@@ -35,4 +35,5 @@ for y in range(imgy):
         # image.putpixel((x, y), (i % 5 * 64, i % 9 * 32, i % 17 * 16))
         image.putpixel((x, y), (i % 5 * 64, i % 17 * 16, i % 9 * 32))
 
+# image.show()
 image.save("newtonFractal.png", "PNG")
