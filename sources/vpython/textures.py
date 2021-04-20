@@ -1,5 +1,5 @@
 # Textures
-# nach Hans-Bernhard Woyand: Python für Ingebieure und Naturwissenschaftler, S. 235
+# nach Hans-Bernhard Woyand: Python für Ingenieure und Naturwissenschaftler, S. 235
 
 from vpython import *
 
