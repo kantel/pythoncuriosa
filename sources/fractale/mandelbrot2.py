@@ -29,8 +29,8 @@ def mandelbrot():
                 if i == (maxiter - 1):
                     color = (0, 0, 0)
                 else:
-                    color = (i%17*16, i%9*32, i%5*64)
-                    # color = (i%5*64, i%17*16, i%9*32)
+                    # color = (i%17*16, i%9*32, i%5*64)
+                    color = (i%5*64, i%17*16, i%9*32)
                 img.putpixel((x, y), color)
     return img
 
@@ -38,7 +38,7 @@ def mandelbrot():
 mandel = mandelbrot()
 
 mandel.save("images/mandel1.png")
-mandel.show()
+# mandel.show()
 
 print("I did it, Babe!")
 
