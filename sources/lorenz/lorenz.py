@@ -5,27 +5,28 @@ from scipy.integrate import odeint
 
 # Parameter
 sigma = 10.0
-beta = 8/3.0
+beta = 8 / 3.0
 rho = 28.0
 
 # Die Lorenzgleichung
 def lorenz(u, t, sigma, beta, rho):
     x, y, z = u
-    dxdt = sigma*(y - x)
-    dydt = rho*x - y - x*z
-    dzdt = x*y - beta*z
-    return(dxdt, dydt, dzdt)
+    dxdt = sigma * (y - x)
+    dydt = rho * x - y - x * z
+    dzdt = x * y - beta * z
+    return (dxdt, dydt, dzdt)
+
 
 # Startwerte und Initialisierung
 y0 = 5.0, 5.0, 5.0
 t = np.linspace(0, 20, 2000)
 
-solution = odeint(lorenz, y0, t, args = (sigma, beta, rho))
+solution = odeint(lorenz, y0, t, args=(sigma, beta, rho))
 
-X, Y, Z = solution[:,0], solution[:,1], solution[:,2]
+X, Y, Z = solution[:, 0], solution[:, 1], solution[:, 2]
 
 fig1 = plt.figure()
-ax1 = fig1.add_subplot(111, projection = "3d", title = "Lorenz-Attraktor")
+ax1 = fig1.add_subplot(111, projection="3d", title="Lorenz-Attraktor")
 ax1.plot(X, Y, Z, "r")
 
 fig2 = plt.figure()
