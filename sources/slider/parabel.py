@@ -42,4 +42,4 @@ sldC.on_changed(update)
 
 ax.grid(True)
 plt.show()
-# print("I did it, Babe!")
+print("I did it, Babe!")
