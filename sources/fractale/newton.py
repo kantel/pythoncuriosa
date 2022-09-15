@@ -36,9 +36,9 @@ for y in range(imgy):
             if abs(z0 - z) < eps: # stop when close enough to any root
                 break
             z = z0
-        # image.putpixel((x, y), (i % 4 * 64, i % 8 * 32, i % 16 * 16))
+        image.putpixel((x, y), (i % 4 * 64, i % 8 * 32, i % 16 * 16))
         # image.putpixel((x, y), (i % 5 * 64, i % 9 * 32, i % 17 * 16))
-        image.putpixel((x, y), (i % 5 * 64, i % 17 * 16, i % 9 * 32))
+        # image.putpixel((x, y), (i % 5 * 64, i % 17 * 16, i % 9 * 32))
 
 image.show()
 image.save(os.path.join(image_folder, "newtonFractal2.png"), "PNG")
