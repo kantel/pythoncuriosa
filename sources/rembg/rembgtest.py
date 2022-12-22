@@ -1,4 +1,4 @@
-import rembg
+from rembg import remove
 from PIL import Image
 import os
 
@@ -8,6 +8,6 @@ input_path = os.path.join(DATAPATH, "me2022.jpg")
 output_path = os.path.join(DATAPATH, "output.png")
 
 input = Image.open(input_path)
-output = rembg.remove(input)
+output = remove(input)
 
 output.save(output_path)
