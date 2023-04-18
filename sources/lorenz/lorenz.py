@@ -5,7 +5,7 @@ from scipy.integrate import odeint
 
 # Parameter
 sigma = 10.0
-beta = 8 / 3.0
+beta1 = 8 / 3.0
 rho = 28.0
 
 # Die Lorenzgleichung
@@ -21,7 +21,7 @@ def lorenz(u, t, sigma, beta, rho):
 y0 = 5.0, 5.0, 5.0
 t = np.linspace(0, 20, 2000)
 
-solution = odeint(lorenz, y0, t, args=(sigma, beta, rho))
+solution = odeint(lorenz, y0, t, args=(sigma, beta1, rho))
 
 X, Y, Z = solution[:, 0], solution[:, 1], solution[:, 2]
 
