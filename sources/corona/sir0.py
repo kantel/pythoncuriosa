@@ -11,8 +11,8 @@ import matplotlib.pyplot as plt
 
 # time unit: 1 h
 beta = 10./(40*8*24)          # Infektionsrate
-gamma = 3.0/(15*24)           # Genesungszeit
-dt = 0.1                      # 6 min
+gamma = 3.0/(15*24)           # Genesungsrate
+dt = 0.1                      # Schrittweite (6 min)
 D = 30                        # Simulatsdauer in Tagen (D)
 N_t = int(D*24/dt)            # Zeitsschritte (Tage*Stunden/dt)
 
@@ -37,7 +37,8 @@ for n in range(N_t):
 fig = plt.figure()
 l1, l2, l3 = plt.plot(t, S, t, I, t, R)
 plt.title("S-I-R-Modell einer Grippe-Pandemie")
-fig.legend((l1, l2, l3), ("S", "I", "R"), loc = "upper right")
+fig.legend((l1, l2, l3), ("S: Gesunde", "I: Infizierte", "R: Genesende"),
+           loc = "center right")
 plt.xlabel("Zeit = Stunden")
 plt.ylabel("Anzahl Personden")
 plt.show()
