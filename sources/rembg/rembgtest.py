@@ -5,8 +5,8 @@ import os
 
 DATAPATH = os.path.join(os.getcwd(), "images")
 
-input_path = os.path.join(DATAPATH, "nymphs09.png")
-output_path = os.path.join(DATAPATH, "nymphs09_output.png")
+input_path = os.path.join(DATAPATH, "alice_sad.png")
+output_path = os.path.join(DATAPATH, "alice_sad_bgrem.png")
 
 # Load the input image
 input_image = Image.open(input_path)
