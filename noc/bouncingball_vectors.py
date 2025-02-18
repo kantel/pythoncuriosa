@@ -1,7 +1,6 @@
 # Bouncing Chicken with Vectors
 import asyncio
 import pygame
-import pygame.math as math
 import os, sys
 
 # Hier wird der Pfad zum Verzeichnis der Assets gesetzt
@@ -16,6 +15,8 @@ FPS = 60  # Framerate
 
 # Farben
 BG_COLOR = 59, 122, 87, 255  # Billardtisch-Grün
+
+vec2 = pygame.Vector2
 
 # Klassen
 # ---------------------------------------------------------------------- #
@@ -67,17 +68,15 @@ class Chicken(pygame.sprite.Sprite):
         self.game_world = _world
         self.image = self.game_world.chicken_im
         self.rect = self.image.get_rect()
-        self.position = math.Vector2(100, 100)
-        self.rect.x, self.rect.y = self.position
-        self.radius = CHICKEN_SIZE
-        self.velocity = math.Vector2(2.5, 2)
+        self.position = vec2(100, 100)
+        self.rect.topleft = self.position
+        self.velocity = vec2(2.5, 2)
 
     def update(self):
-        self.rect.x += self.velocity.x
-        self.rect.y += self.velocity.y
-        if self.rect.x > WIDTH - self.radius  or self.rect.x < 0:
+        self.rect.topleft += self.velocity
+        if self.rect.right > WIDTH  or self.rect.left < 0:
             self.velocity.x *= -1
-        if self.rect.y > HEIGHT - self.radius or self.rect.y < 0:
+        if self.rect.bottom > HEIGHT or self.rect.top < 0:
             self.velocity.y *= -1
 
 # ---------------------------------------------------------------------- #
