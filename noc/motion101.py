@@ -1,16 +1,14 @@
-# Bouncing Chicken with Vectors
+# Motion 101 (Velocity
 import asyncio
 import pygame
-import os, sys
-
-# Hier wird der Pfad zum Verzeichnis der Assets gesetzt
-DATAPATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+from random import randint
+import sys
 
 # Einige nützliche Konstanten
 WIDTH = 800
 HEIGHT = 450
-CHICKEN_SIZE = 48
-TITLE = "Bouncing Chicken with Vectors (Pygame Version)"
+RADIUS = 24
+TITLE = "Motion 101 (Velocity)"
 FPS = 60  # Framerate
 
 # Farben
@@ -28,20 +26,14 @@ class GameWorld:
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption(TITLE)
-        self.all_sprites = pygame.sprite.Group()
-        self.chicken_im = pygame.image.load(os.path.join(DATAPATH, "chick.png")).convert_alpha()
+
         self.clock = pygame.time.Clock()
         self.keep_going = True
 
     def reset(self):
         # Neustart oder Status zurücksetzen
         # Hier werden alle Elemente der GameWorld initialisiert
-
-        # Load Assets
-
-        self.chicken_im = pygame.transform.scale(self.chicken_im, (CHICKEN_SIZE, CHICKEN_SIZE))
-        chicken = Chicken(self)
-        self.all_sprites.add(chicken)
+        self.mover = Mover(self)
 
     def events(self):
         # Poll for events
@@ -51,34 +43,35 @@ class GameWorld:
                 self.keep_going = False
 
     def update(self):
-        self.all_sprites.update()
+        self.mover.update()
 
     def draw(self):
         self.screen.fill(BG_COLOR)
         # Game drawings go here
-        self.all_sprites.draw(self.screen)
+        self.mover.draw()
+
         # Alle Änderungen auf den Bildschirm
         pygame.display.flip()
 
 # ---------------------------------------------------------------------- #
-## Class Chicken
-class Chicken(pygame.sprite.Sprite):
+class Mover():
 
     def __init__(self, _world):
-        super().__init__()
-        self.game_world = _world
-        self.image = self.game_world.chicken_im
-        self.rect = self.image.get_rect()
-        self.position = vec2(100, 100)
-        self.rect.topleft = self.position
-        self.velocity = vec2(2.5, 2)
+        self.world = _world
+        self.position = vec2((randint(20, WIDTH - 20), randint(20, HEIGHT - 20 )))
+        self.velocity = vec2((randint(-5, 5), randint(-5, 5)))
+        self.radius = RADIUS
 
     def update(self):
-        self.rect.topleft += self.velocity
-        if self.rect.right > WIDTH  or self.rect.left < 0:
+        self.position += self.velocity
+        if self.position.x > WIDTH - self.radius or self.position.x < self.radius:
             self.velocity.x *= -1
-        if self.rect.bottom > HEIGHT or self.rect.top < 0:
+        if self.position.y > HEIGHT - self.radius or self.position.y < self.radius:
             self.velocity.y *= -1
+
+    def draw(self):
+        pygame.draw.aacircle(self.world.screen, (255, 191, 0, 255), self.position, self.radius)
+        pygame.draw.aacircle(self.world.screen, (0, 0, 0, 255), self.position, self.radius, 1)
 
 # ---------------------------------------------------------------------- #
 # ## Hauptprogramm
