@@ -1,5 +1,4 @@
 # Motion 101 (Velocity and Constant Acceleration)
-import asyncio
 import pygame
 from random import random, uniform
 import sys
@@ -101,17 +100,13 @@ world = GameWorld()
 world.reset()
 
 # Hauptschleife
-async def main():
-    while world.keep_going:
-        # Framerate festsetzen
-        world.clock.tick(FPS)
+while world.keep_going:
+    # Framerate festsetzen
+    world.clock.tick(FPS)
 
-        world.events()
-        world.update()
-        world.draw()
-        await asyncio.sleep(0)  # Very important, and keep it 0
+    world.events()
+    world.update()
+    world.draw()
 
-    pygame.quit()
-    sys.exit(0)
-
-asyncio.run(main())
+pygame.quit()
+sys.exit(0)

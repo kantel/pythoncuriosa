@@ -1,5 +1,4 @@
-# Motion 101 (Velocity
-import asyncio
+# Motion 101 (Velocity)
 import pygame
 from random import randint
 import sys
@@ -7,12 +6,11 @@ import sys
 # Einige nützliche Konstanten
 WIDTH = 800
 HEIGHT = 450
-RADIUS = 24
 TITLE = "Motion 101 (Velocity)"
 FPS = 60  # Framerate
 
 # Farben
-BG_COLOR = 59, 122, 87, 255  # Billardtisch-Grün
+BG_COLOR = 59, 122, 87  # Billardtisch-Grün
 
 vec2 = pygame.Vector2
 
@@ -60,7 +58,7 @@ class Mover():
         self.world = _world
         self.position = vec2((randint(20, WIDTH - 20), randint(20, HEIGHT - 20 )))
         self.velocity = vec2((randint(-5, 5), randint(-5, 5)))
-        self.radius = RADIUS
+        self.radius = 24
 
     def update(self):
         self.position += self.velocity
@@ -70,8 +68,8 @@ class Mover():
             self.velocity.y *= -1
 
     def draw(self):
-        pygame.draw.aacircle(self.world.screen, (255, 191, 0, 255), self.position, self.radius)
-        pygame.draw.aacircle(self.world.screen, (0, 0, 0, 255), self.position, self.radius, 1)
+        pygame.draw.aacircle(self.world.screen, (255, 191, 0), self.position, self.radius)
+        pygame.draw.aacircle(self.world.screen, (0, 0, 0), self.position, self.radius, 1)
 
 # ---------------------------------------------------------------------- #
 # ## Hauptprogramm
@@ -79,17 +77,13 @@ world = GameWorld()
 world.reset()
 
 # Hauptschleife
-async def main():
-    while world.keep_going:
-        # Framerate festsetzen
-        world.clock.tick(FPS)
+while world.keep_going:
+    # Framerate festsetzen
+    world.clock.tick(FPS)
 
-        world.events()
-        world.update()
-        world.draw()
-        await asyncio.sleep(0)  # Very important, and keep it 0
+    world.events()
+    world.update()
+    world.draw()
 
-    pygame.quit()
-    sys.exit(0)
-
-asyncio.run(main())
+pygame.quit()
+sys.exit(0)
