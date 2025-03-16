@@ -1,4 +1,4 @@
-# Motion 101 (Velocity and Constant Acceleration)
+# Motion 101 (Velocity and Random Acceleration)
 import pygame
 from random import random, uniform
 import sys
