@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<!-- saved from url=(0089)https://trinket.io/embed/python/df38ed2903a3?noSharing=true&noStorage=true&inLibrary=true -->
+<html lang="en" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths desktop mac landscape mac os macos10 macos10_15 32bit chrome chrome137 chrome137_0 webkit de-de mixblendmode bklvdbb idc0_350" style=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta http-equiv="origin-trial" content="A7vZI3v+Gz7JfuRolKNM4Aff6zaGuT7X0mf3wtoZTnKv6497cVMnhy03KDqX7kBz/q/iidW7srW31oQbBt4VhgoAAACUeyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGUuY29tOjQ0MyIsImZlYXR1cmUiOiJEaXNhYmxlVGhpcmRQYXJ0eVN0b3JhZ2VQYXJ0aXRpb25pbmczIiwiZXhwaXJ5IjoxNzU3OTgwODAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
+  
+  <title>Trinket: run code anywhere</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <meta name="keywords" content="">
+  <link rel="icon" href="https://trinket.io/img/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://trinket.io/cache-prefix-a35684d8/img/icons/apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://trinket.io/cache-prefix-a35684d8/img/icons/apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://trinket.io/cache-prefix-a35684d8/img/icons/apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="https://trinket.io/cache-prefix-a35684d8/img/icons/apple-touch-icon-precomposed.png">
+  <link rel="stylesheet" type="text/css" href="./font-awesome.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./font-mfizz.css" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="./embed.css" crossorigin="anonymous">
+  
+
+
+<link rel="stylesheet" type="text/css" href="./github.min.css">
+
+
+<link rel="stylesheet" type="text/css" href="./rangeslider.min.css">
+<link rel="stylesheet" type="text/css" href="./weather-icons.min.css">
+
+
+
+  <script type="text/javascript" async="" charset="utf-8" src="./recaptcha__de.js" crossorigin="anonymous" integrity="sha384-8bcyTD0rZ0ljXGuaytcpmxoo4CpTGZWItPtbHJ94KSWDHwTXCnaNj+7lCHaUFGu8"></script><script type="text/javascript">
+    trinket = {
+      config : {
+        apphostname       : 'trinket.io',
+        usersubdomains    :  true,
+        protocol          : 'https',
+        cachePrefix       : 'cache-prefix-',
+        prefixes          :  {"components":"cache-prefix-410d6d0a","js":"cache-prefix-a35684d8","css":"cache-prefix-a35684d8","img":"cache-prefix-a35684d8","fonts":"cache-prefix-a35684d8","partials":"cache-prefix-a35684d8","skulpt":"50e5bcc6","models":null,"m0-2021":"m0-2021"},
+        components        :  {"ace-builds":"v1.2.6.1rc2","anchor-js":"2.0.0","angular-file-saver":"1.1.3","angular-notifyjs":"0.1.0","angular-ui-router":"0.2.11","angular-ui-tree":"2.0.10","angular-ui-utils":"0.1.1","angular-xeditable":"0.1.8","bluebird":"3.5.1","d3":"3.4.11","filereader":"107f68c3b9","file-saver.js":"1.20150507.2","font-mfizz":"2.0.1","gsap":"1.15.0","jquery-ui":"https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1","jsdiff":"1.0.8","jszip":"3.1.4","jszip-utils":"dist","lazysizes":"1.5.0","lodash":"2.4.1","modernizr":"2.7.2","ng-file-upload":"1.2.6","ngInfiniteScroll":"1.1.2","notifyjs":"0.4.2","opal":"0.6.2","restangular":"1.3.1","speakingurl":"1.1.5","video.js":"5.20.4","yamljs":"0.1.5"},
+        vendorHost        : 'https://trinket-vendor-assets.trinket.io',
+        broadcastHostname : 'broadcastapp.trinket.io',
+        broadcastPort     : '',
+        broadcastProtocol : 'https',
+        python3_api       : 'https://python-code-aws.trinket.io',
+        java_api          : 'https://java-connect-aws.trinket.io',
+        R_api             : 'https://r-aws.trinket.io',
+        pygame_api        : 'https://pygame.trinket.io',
+        plans             : [{ "connect"  : "Connect"  },
+                             { "codeplus" : "Code+" }],
+        logClientCodeError : false,
+        logClientMetric   : false,
+        draftDebounce     : 2500,
+        autosaveDebounce  : 1000
+      }
+    };
+    
+    </script>
+
+  <script src="./jquery(1).min.js" type="text/javascript"></script>
+
+  <script src="./modernizr.min.js" type="text/javascript"></script>
+  <script src="./detectizr.min.js" type="text/javascript"></script>
+  <script src="./md5.js" type="text/javascript"></script>
+  <script src="./sha1.js" type="text/javascript"></script>
+  <script src="./aes.js" type="text/javascript"></script>
+
+  <!--[if lte IE 9]>
+  <script type="text/javascript" src="/js/vendor/jQuery.XDomainRequest.js"></script>
+  <![endif]-->
+
+  
+  
+  
+  <script async="" src="./js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+  </script>
+  
+  
+  <script src="./api.js"></script>
+<script>
+function submitRecaptchaForm(formId) {
+  document.getElementById(formId).submit();
+}
+function submitContactForm() {
+  submitRecaptchaForm('contact-form');
+}
+function submitReportContentForm() {
+  document.getElementById('report-content-form').submit();
+}
+function submitPasswordResetForm() {
+  submitRecaptchaForm('password-reset-form');
+}
+function submitEmailForm(recaptcha) {
+  if (window.TrinketApp) {
+    window.TrinketApp.onSendEmailClick(recaptcha);
+  } else {
+    submitEmailModalForm(recaptcha);
+  }
+}
+function submitSignUpShortForm() {
+  submitRecaptchaForm('sign-up-short');
+}
+function submitSignUpLongForm() {
+  submitRecaptchaForm('sign-up-long');
+}
+function submitSignUpIndexForm() {
+  submitRecaptchaForm('sign-up-index');
+}
+function submitSignUpInterestForm() {
+  submitRecaptchaForm('interest-signup-form');
+}
+function submitEducatorForm() {
+  submitRecaptchaForm('submit-educator');
+}
+function submitM0RegistrationForm() {
+  $('#registration-form').trigger('submit');
+}
+function emailVerificationForm() {
+  $.ajax({
+    method: "POST",
+    url: "/api/users/verify-email",
+    data: { 'g-recaptcha-response': grecaptcha.getResponse() }
+  })
+  .done(function(result) {
+    if (result.success) {
+      $('#account').notify(
+        "Verification email sent."
+        , { position : 'top center', className : 'success' }
+      );
+    }
+    else {
+      $('#account').notify(
+        "There was a problem sending the verification email. Please try again."
+        , { position : 'top center', className : 'alert' }
+      );
+    }
+  })
+  .fail(function(err) {
+    $('#account').notify(
+      "There was a problem sending the verification email. Please try again."
+      , { position : 'top center', className : 'alert' }
+    );
+  });
+}
+</script>
+
+  
+<style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style><meta class="foundation-data-attribute-namespace"><meta class="foundation-mq-xxlarge"><meta class="foundation-mq-xlarge-only"><meta class="foundation-mq-xlarge"><meta class="foundation-mq-large-only"><meta class="foundation-mq-large"><meta class="foundation-mq-medium-only"><meta class="foundation-mq-medium"><meta class="foundation-mq-small-only"><meta class="foundation-mq-small"><style></style><script src="./theme-xcode.js"></script><script src="./mode-python.js"></script><style id="ace-xcode">.ace-xcode .ace_gutter {background: #e8e8e8;color: #333}.ace-xcode .ace_print-margin {width: 1px;background: #e8e8e8}.ace-xcode {background-color: #FFFFFF;color: #000000}.ace-xcode .ace_cursor {color: #000000}.ace-xcode .ace_marker-layer .ace_selection {background: #B5D5FF}.ace-xcode.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px #FFFFFF;}.ace-xcode .ace_marker-layer .ace_step {background: rgb(198, 219, 174)}.ace-xcode .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid #BFBFBF}.ace-xcode .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.071)}.ace-xcode .ace_gutter-active-line {background-color: rgba(0, 0, 0, 0.071)}.ace-xcode .ace_marker-layer .ace_selected-word {border: 1px solid #B5D5FF}.ace-xcode .ace_constant.ace_language,.ace-xcode .ace_keyword,.ace-xcode .ace_meta,.ace-xcode .ace_variable.ace_language {color: #C800A4}.ace-xcode .ace_invisible {color: #BFBFBF}.ace-xcode .ace_constant.ace_character,.ace-xcode .ace_constant.ace_other {color: #275A5E}.ace-xcode .ace_constant.ace_numeric {color: #3A00DC}.ace-xcode .ace_entity.ace_other.ace_attribute-name,.ace-xcode .ace_support.ace_constant,.ace-xcode .ace_support.ace_function {color: #450084}.ace-xcode .ace_fold {background-color: #C800A4;border-color: #000000}.ace-xcode .ace_entity.ace_name.ace_tag,.ace-xcode .ace_support.ace_class,.ace-xcode .ace_support.ace_type {color: #790EAD}.ace-xcode .ace_storage {color: #C900A4}.ace-xcode .ace_string {color: #DF0002}.ace-xcode .ace_comment {color: #008A00}.ace-xcode .ace_indent-guide {background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==) right repeat-y}
+/*# sourceURL=ace/css/ace-xcode */</style><style type="text/css">@font-face {
+  font-family: "PjsEmptyFont";
+  src: url('data:application/x-font-ttf;base64,AAEAAAAKAIAAAwAgT1MvMgAAAAAAAAEoAAAAVmNtYXAAAAAAAAABiAAAACxnbHlmAAAAAAAAAbwAAAAkaGVhZAAAAAAAAACsAAAAOGhoZWEAAAAAAAAA5AAAACRobXR4AAAAAAAAAYAAAAAGbG9jYQAAAAAAAAG0AAAABm1heHAAAAAAAAABCAAAACBuYW1lAAAAAAAAAeAAAAAgcG9zdAAAAAAAAAIAAAAAEAABAAAAAQAAAkgTY18PPPUACwAgAAAAALSRooAAAAAAyld0xgAAAAAAAQABAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAACAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACMAIwAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAMAAQAAAAwABAAgAAAABAAEAAEAAABB//8AAABB////wAABAAAAAAAAAAgAEgAAAAEAAAAAAAAAAAAAAAAxAAABAAAAAAABAAEAAQAAMTcBAQAAAAAAAgAeAAMAAQQJAAEAAAAAAAMAAQQJAAIAAgAAAAAAAQAAAAAAAAAAAAAAAAAA')
+       format('truetype');
+}</style></head>
+<body id="embed_content_python" data-no-metrics="true" data-assignment="false" data-assignment-feedback="false" data-view-only="false" data-autofocus="true" class="mode-standard  remixable" data-is-mobile="false" marginwidth="0" marginheight="0">
+  <input id="whoami" type="hidden" value="kantel">
+  
+  <input id="user" type="hidden" value="62b732010552872a0e4c88e2">
+  
+  <input id="roles" type="hidden" value="e8060b2e2450be1ce1a120c95a402272+U2FsdGVkX1/m32innyj4W/pKYLrssnCvsvaeqaO1NbKppSU8+0WypTt+2/1e3uhOGmXxthOgMw13egtbMN3UdIAbqxEdF0KWLxlOG1KomX4nbDER3u38yLMJwX/d7PCh1ZfBD8b+/XdiL/4F/3NAf4pKHdFalE7+A0lkny73IaEvOl9NK4a6yfX4voJET489QdPOK0TDdRHTc1BCLadxaLxkfQoydNuPVuxKApfDbmQ5qCVxvI/iXZh8JKCzvo6jiMRi0XMwoCfp+SYNT8CY1+NMmC/SS0a0PuZgXU7XhksKMUZxD1sM2MqGORXCdJ5OsKCzo65AIXH1bU1LgOy14YEXT5LWr0vHbKWpseyeNGLjI3lFkyyT0lBWudvcO3HNyZ8aixM8RvcsX5T5EBhwpeGMo1//8Ex1GUv7yEYVefAT62TamMZhkuQQJY3DPnM0AMp/JTSNMKguy+WttuoVl8q5BvR9MLq1IUoJWKSkZermMAyszG1MGQy0sIfPQJzGl1MMJTes+rIBofdxLrA+xsQuM+7dOsUO43gXVxUfxOM+mIM0S27AFyfTDKqOhEl86MLz8ENx/GikjFFcLadufOojlfspbVmBuHFjrZkOwUzdASSz1Rh1R0kQRGj7ggRdo/VByyJEbC4ldSPBvwR0wXLeu2Oyq8oARZ8rjKuu7nC/kY2zZN9IwOJOIjz7wJhYkjI1N+ORxDMInicWTkRRpOfJwExaY+l8m6t4cOc1MEEVWH+0CJlI6qd7juD2/vvTZgsnuFlY233feFkjLYy8SuqnzpcX5TZi7B8Urg5FAJEu53dx0aysJYlIHiNLBJzs">
+  
+  <script>
+    trinketObject = {"id":"67b107303e941e100072daa8","code":"[{&quot;name&quot;:&quot;main.py&quot;,&quot;content&quot;:&quot;from processing import *\\n\\nsunDiam = 80\\n\\nearthDiam = 30\\nearthOrbitRadius = 130\\nearthAngle = 0\\n\\nmoonDiam = 10\\nmoonOrbitRadius = 50\\nmoonAngle = 0\\n\\nnemDiam = 12\\nnemOrbitRadius = 38\\nnemAngle = 0\\n\\ndef setup():\\n    size(600, 400)\\n\\ndef draw():\\n    global earthAngle, moonAngle, nemAngle\\n    background(0, 0, 0)\\n\\n    # Sonne im Zentrum\\n    translate(width/2, height/2)\\n    fill(255, 200, 64)\\n    ellipse(0, 0, sunDiam, sunDiam)\\n\\n    # Erde dreht sich um die Sonne\\n    rotate(earthAngle)\\n    translate(earthOrbitRadius, 0)\\n    fill(64, 64, 255)\\n    # ellipse(0, 0, earthDiam, earthDiam)\\n    rect(-earthDiam/2, -earthDiam/2, earthDiam, earthDiam)\\n\\n    # Mond dreht sich um die Erde\\n    with pushMatrix():\\n        rotate(moonAngle)\\n        translate(moonOrbitRadius, 0)\\n        fill(192, 192, 80)\\n        # ellipse(0, 0, moonDiam, moonDiam)\\n        rect(-moonDiam/2, -moonDiam/2, moonDiam, moonDiam)\\n\\n    # Nemesis dreht sich um die Erde\\n    with pushMatrix():\\n        rotate(nemAngle)\\n        translate(nemOrbitRadius, 0)\\n        fill(220, 75, 75)\\n        # ellipse(0, 0, nemDiam, nemDiam)\\n        rect(-nemDiam/2, -nemDiam/2, nemDiam, nemDiam)\\n\\n    earthAngle += 0.01\\n    moonAngle += 0.01\\n    nemAngle += 0.015\\n    \\nrun()&quot;}]","lang":"python","name":"Planetensystem","description":null,"groupId":null,"_parent":null,"_origin_id":null,"_owner":"62b732010552872a0e4c88e2","hash":"e8fded2e6c0da94c71b2c056bb61f188a0d36fbb","shortCode":"df38ed2903a3","lastUpdated":"2025-02-15T21:33:32.854Z","metrics":{},"lastView":{},"snapshot":"https://trinket-snapshots.trinket.io/df38ed2903a3-1739655212849.png","assets":[],"displayOnly":null,"original":null,"settings":{"autofocusEnabled":true,"testsEnabled":false,"astro_pi_mission_submission":false},"submissionState":null,"submissionOpts":{},"submittedOn":null,"slug":"planetensystem","published":true,"template":null};
+  
+    draftObject   = undefined;
+    
+    userSettings = {"disableAceEditor":false,"theme":"xcode","lineWrapping":true,"pythonTab":2,"javaTab":2,"rTab":2,"htmlTab":2};
+    
+  
+  </script>
+  <input id="shareType" type="hidden" value="python">
+  <input id="proxy" type="hidden" value="https://trinket.io/proxy">
+
+  <div id="wrapper" class="off-canvas-wrap owner-view row" data-offcanvas="">
+    <div class="trinket-wrapper inner-wrap">
+
+    
+
+      <nav id="menu" class="trinket-header " data-interface="top-menu">
+        <section class="left">
+          <div class="icon-bar left-menu-toggle">
+            <button class="item button menu-button left-off-canvas-toggle" data-action="menu.options" role="button" tabindex="0" aria-label="Open Menu">
+              <i class="fa fa-bars"></i>
+            </button>
+          </div>
+        </section>
+        <section class="left title-bar">
+          <span title="hosted by trinket.io" data-dropdown="brand-menu" aria-controls="brand-menu" aria-expanded="false">
+            <img class="show-for-large-up" src="./trinket-logo.png" alt="trinket logo">
+            <img class="show-for-medium-down" src="./trinket-logo-circles.png" alt="trinket logo">
+          </span>
+          
+          <ul id="brand-menu" class="f-dropdown" data-dropdown-content="" aria-hidden="true" tabindex="-1">
+            <li><a id="brand">View on trinket.io <i class="fa fa-external-link"></i></a></li>
+          </ul>
+          
+          
+          
+        </section>
+        <section class="mode-toolbar left" data-mode="interact" role="menubar">
+          <div class="icon-bar label-right">
+            
+
+<a class="edit-it menu-button item allow-original show-for-small-only" data-action="code.edit" title="Edit the code.">
+  <i class="fa fa-pencil"></i>
+  <label class="show-for-large-up">Code</label>
+</a>
+  
+<a class="button run-it menu-button item split allow-original" data-action="code.run" title="Stop program." role="button" aria-label="Run Button" tabindex="0">
+  <i class="fa fa-stop"></i>
+  <label class="show-for-large-up">Stop</label>
+  <span data-dropdown="run-options" data-options="align:bottom" role="menu"></span>
+</a>
+  
+<a class="check-it menu-button item allow-original hide" data-action="code.check" title="Check your code." tabindex="0">
+  <i class="fa fa-check-circle"></i>
+  <label class="show-for-large-up">Check</label>
+</a>
+  
+<a class="menu-button item show-for-medium-up" href="https://trinket.io/docs/python" target="_blank" title="View the supported modules.">
+  <i class="fa fa-question"></i>
+  <label class="show-for-large-up">Modules</label>
+</a>
+  
+
+
+            
+            
+            
+          </div>
+        </section>
+        
+        <section class="mode-indicator right">
+          <div class="icon-bar">
+            <div class="item"><div id="draftMessage" class="hide draft-message"></div></div>
+            
+
+
+
+
+
+          </div>
+        </section>
+        
+      </nav>
+
+      <aside class="left-off-canvas-menu" data-interface="trinket-menu">
+  <ul class="off-canvas-list mode-menu" data-mode="interact">
+    
+    <li><label>Menu</label></li>
+    
+      
+      <li>
+        <a class="menu-button" data-action="code.modules" data-data="open" tabindex="0"><i class="fa fa-question"></i>Modules</a>
+      </li>
+      
+    
+    
+    <li>
+      <a class="reset-it menu-button" data-action="code.reset" title="Reset editor to original version" tabindex="0"><i class="fa fa-refresh"></i>Reset</a>
+    </li>
+    
+    <li>
+      <a class="menu-button" data-action="mode.fullscreen" data-no-analytics="true" title="Switch to fullscreen mode" tabindex="0"><i class="fa fa-expand"></i>Fullscreen</a>
+    </li>
+    
+    <li>
+      <a class="menu-button" data-action="mode.download" title="Download this code to your device" tabindex="0"><i class="fa fa-download"></i>Download</a>
+    </li>
+    
+    
+    
+    <li>
+      <a class="menu-button" data-action="code.settings" tabindex="0"><i class="fa fa-cog"></i>Settings</a>
+    </li>
+    
+    
+    
+    <li><label>Font Size</label></li>
+    <li>
+      <a class="menu-button font-size small-font left" data-action="code.fontsize" data-data="1em" tabindex="0" aria-label="Set font size to small" role="menuitem">aA</a>
+      <a class="menu-button font-size medium-font left" data-action="code.fontsize" data-data="1.5em" tabindex="0" aria-label="Set font size to medium" role="menuitem">aA</a>
+      <a class="menu-button font-size large-font left" data-action="code.fontsize" data-data="2em" tabindex="0" aria-label="Set font size to large" role="menuitem">aA</a>
+    </li>
+    
+  </ul>
+</aside>
+
+
+      
+
+      <section class="trinket-content main-section" data-interface="content">
+        <div id="flashMessage" class="container hide">
+          <div id="flashContent"></div>
+        </div>
+        <div class="trinket-content-wrapper " role="main">
+          <div id="content-overlay" class="hide" data-interface="overlay" style="font-size: 1em; display: none;"></div>
+          
+  <input id="honeypot" type="text" tabindex="-1" style="font-size: 1em;">
+  <input id="start-value" type="hidden" value="code" style="font-size: 1em;">
+  <input id="runOption-value" type="hidden" value="run" style="font-size: 1em;">
+  <input id="runMode-value" type="hidden" value="" style="font-size: 1em;">
+  <div id="imageAssets" style="font-size: 1em;"></div>
+  <div id="modules" class="hide" data-interface="overlay" style="font-size: 1em;">
+    <a class="menu-button closer" data-action="code.modules" data-data="close"><i class="fa fa-times-circle-o"></i></a>
+  </div>
+  <div id="editor" class="code-editor with-info hide" data-interface="editor" style="font-size: 1em; width: 685px;"><div class="code-editor" data-interface="code-editor"><div class="tab-nav allow-assets"><dl class="left-options"><dd class="tab-button"><a class="tab-scroll-link left-arrow" data-direction="-1"><i class="fa fa-chevron-left"></i></a></dd><dd class="tab-button"><a class="tab-scroll-link right-arrow" data-direction="1"><i class="fa fa-chevron-right"></i></a></dd></dl><dl class="scrollable-content" role="tablist" aria-label="File tabs"><dd class="tab permanent active"><a class="file-tab-link" aria-label="main.py tab" role="tab"><span class="file-name">main.py</span><span class="tab-options-link menu-button" data-action="file.options" role="button" tabindex="0"></span></a></dd></dl><dl class="right-options"><dd class="tab-button" title="Create text file"><a class="add-file-link menu-button" data-action="file.add" aria-label="Add new file" role="button"><i class="fa fa-plus"></i></a></dd><dd class="tab-button" title="Upload text file"><a class="upload-file-link menu-button" data-action="file.upload" aria-label="Upload text file" role="button"><i class="fa fa-upload"></i></a></dd><dd class="tab" title="Manage images"><a class="file-tab-link add-asset-link" data-action="assets.view" title="View and Add Images"><i class="fa fa-file-image-o"></i></a></dd></dl><div class="clearfix"></div></div><div class="file-content-container"><div class="file-content ace_editor active ace-xcode" style="font-size: inherit;"><textarea class="ace_text-input" wrap="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 16px; width: 7.20125px; left: 138.415px; top: 224px;"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: 0px; height: 537px; width: 48px;"><div class="ace_gutter-cell " style="height: 16px;">1</div><div class="ace_gutter-cell " style="height: 16px;">2</div><div class="ace_gutter-cell " style="height: 16px;">3</div><div class="ace_gutter-cell " style="height: 16px;">4</div><div class="ace_gutter-cell " style="height: 16px;">5</div><div class="ace_gutter-cell " style="height: 16px;">6</div><div class="ace_gutter-cell " style="height: 16px;">7</div><div class="ace_gutter-cell " style="height: 16px;">8</div><div class="ace_gutter-cell " style="height: 16px;">9</div><div class="ace_gutter-cell " style="height: 16px;">10</div><div class="ace_gutter-cell " style="height: 16px;">11</div><div class="ace_gutter-cell " style="height: 16px;">12</div><div class="ace_gutter-cell " style="height: 16px;">13</div><div class="ace_gutter-cell " style="height: 16px;">14</div><div class="ace_gutter-cell " style="height: 16px;">15</div><div class="ace_gutter-cell " style="height: 16px;">16</div><div class="ace_gutter-cell " style="height: 16px;">17<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">18</div><div class="ace_gutter-cell " style="height: 16px;">19</div><div class="ace_gutter-cell " style="height: 16px;">20<span class="ace_fold-widget ace_start ace_open" style="height: 16px;"></span></div><div class="ace_gutter-cell " style="height: 16px;">21</div><div class="ace_gutter-cell " style="height: 16px;">22</div><div class="ace_gutter-cell " style="height: 16px;">23</div><div class="ace_gutter-cell " style="height: 16px;">24</div><div class="ace_gutter-cell " style="height: 16px;">25</div><div class="ace_gutter-cell " style="height: 16px;">26</div><div class="ace_gutter-cell " style="height: 16px;">27</div><div class="ace_gutter-cell " style="height: 16px;">28</div><div class="ace_gutter-cell " style="height: 16px;">29</div><div class="ace_gutter-cell " style="height: 16px;">30</div><div class="ace_gutter-cell " style="height: 16px;">31</div><div class="ace_gutter-cell " style="height: 16px;">32</div><div class="ace_gutter-cell " style="height: 16px;">33</div></div><div class="ace_gutter-active-line" style="top: 224px; height: 16px;"></div></div><div class="ace_scroller" style="left: 48px; right: 15px; bottom: 0px;"><div class="ace_content" style="margin-top: 0px; width: 710px; height: 537px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 580.1px; visibility: hidden;"></div></div><div class="ace_layer ace_marker-layer"><div class="ace_active-line" style="height:16px;top:224px;left:0;right:0;"></div></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_keyword">from</span> <span class="ace_identifier">processing</span> <span class="ace_keyword">import</span> <span class="ace_keyword ace_operator">*</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">sunDiam</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">80</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">earthDiam</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">30</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">earthOrbitRadius</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">130</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">earthAngle</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">moonDiam</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">10</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">moonOrbitRadius</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">50</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">moonAngle</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">nemDiam</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">12</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">nemOrbitRadius</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">38</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_identifier">nemAngle</span> <span class="ace_keyword ace_operator">=</span> <span class="ace_constant ace_numeric">0</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_keyword">def</span> <span class="ace_identifier">setup</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>:</div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">size</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">600</span>, <span class="ace_constant ace_numeric">400</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_keyword">def</span> <span class="ace_identifier">draw</span><span class="ace_paren ace_lparen">(</span><span class="ace_paren ace_rparen">)</span>:</div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_keyword">global</span> <span class="ace_identifier">earthAngle</span>, <span class="ace_identifier">moonAngle</span>, <span class="ace_identifier">nemAngle</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">background</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0</span>, <span class="ace_constant ace_numeric">0</span>, <span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_comment"># Sonne im Zentrum</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">translate</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">width</span><span class="ace_keyword ace_operator">/</span><span class="ace_constant ace_numeric">2</span>, <span class="ace_identifier">height</span><span class="ace_keyword ace_operator">/</span><span class="ace_constant ace_numeric">2</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">fill</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">255</span>, <span class="ace_constant ace_numeric">200</span>, <span class="ace_constant ace_numeric">64</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">ellipse</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">0</span>, <span class="ace_constant ace_numeric">0</span>, <span class="ace_identifier">sunDiam</span>, <span class="ace_identifier">sunDiam</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_comment"># Erde dreht sich um die Sonne</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">rotate</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">earthAngle</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">translate</span><span class="ace_paren ace_lparen">(</span><span class="ace_identifier">earthOrbitRadius</span>, <span class="ace_constant ace_numeric">0</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_identifier">fill</span><span class="ace_paren ace_lparen">(</span><span class="ace_constant ace_numeric">64</span>, <span class="ace_constant ace_numeric">64</span>, <span class="ace_constant ace_numeric">255</span><span class="ace_paren ace_rparen">)</span></div></div><div class="ace_line_group" style="height:16px"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">  </span>  <span class="ace_comment"># ellipse(0, 0, earthDiam, earthDiam)</span></div></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 90.415px; top: 224px; width: 7.20125px; height: 16px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 20px; bottom: 0px;"><div class="ace_scrollbar-inner" style="width: 20px; height: 896px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="display: none; height: 20px; left: 48px; right: 15px;"><div class="ace_scrollbar-inner" style="height: 20px; width: 710px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-optical-sizing: inherit; font-size-adjust: inherit; font-kerning: inherit; font-feature-settings: inherit; font-variation-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div><div class="file-content fixed-right"><div class="asset-viewer">
+  <div id="asset-viewer-contents" class="contents">
+    <div class="clearfix">
+      <p class="broadcasting-assets-info alert-box warning">
+        Adding or removing <span data-replace-text="files">images</span> is disabled during broadcasting.
+        You'll be able to update <span data-replace-text="files">images</span> again once the broadcast session is over.
+      </p>
+    </div>
+
+    <div class="clearfix">
+      <h4 class="left" data-replace-text="Files">Images</h4>
+      <a class="button small right" events="click:view.addimage.show"><i class="fa fa-plus"></i> <span data-replace-text="File">Image</span> Library</a>
+    </div>
+
+    <p>
+      <span data-replace-text="Files">Images</span> listed here are available to use in your code in this trinket.
+      Click the <span data-replace-text="File">Image</span> Library button to include more or upload new <span data-replace-text="files">images</span>.
+    </p>
+
+    <!-- <a class="button small" events="click:view.add-link.show"><i class="fa fa-link">Link</i></a> -->
+
+    <div id="asset-list-wrapper">
+      <div class="howto-container hide" style="display: block;">
+        <dl class="accordion" data-accordion="">
+          <dd class="accordion-navigation">
+            <a href="https://trinket.io/embed/python/df38ed2903a3?noSharing=true&amp;noStorage=true&amp;inLibrary=true#howto"><i class="fa fa-question-circle"></i> How To Use <span data-replace-text="Files">Images</span></a>
+            <div id="howto" class="howto-message content">
+            <p>
+      <span>Images can be used with the <code>turtle</code> module.</span>
+      </p><pre><code>import turtle
+screen = turtle.Screen()
+# set the screen background
+screen.bgpic("filename.png")
+
+# Or, set the shape of a turtle
+screen.addshape("filename.png")
+tina = turtle.Turtle()
+tina.shape("filename.png")</code></pre>
+    <p></p></div>
+          </dd>
+        </dl>
+      </div>
+
+      <ul id="trinket-asset-list" class="list-view asset-list" style="display: none;">
+        
+      </ul>
+    </div>
+  </div>
+
+  
+
+  <!--
+  <div class="template overlay" template-id="imageLink">
+    <input type="text" placeholder="paste image url here">
+    <input type="text" placeholder="image name">
+    <input type="button" name="add">
+    <a class="closer"><i class="fa fa-times-circle-o"></i></a>
+  </div>
+  -->
+</div></div></div><div class="info-area collapsed empty"><div class="info-quick"></div><div class="scroll-wrap"><div class="info-full"></div></div><a class="expander fa" style="display: none;"></a></div></div><form id="file-upload-form"><input type="file" name="file-upload" id="file-upload" class="hidden" tabindex="-1"></form></div>
+
+  
+  <div id="dragbar" style="font-size: 1em;"></div>
+  
+
+  <div id="codeOutput" class="codeOutput" data-interface="output" style="font-size: 1em;">
+
+    
+
+    <div id="outputTabs" class="">
+      <div class="active menu-button" id="codeOutputTab" data-action="output.view">Result</div>
+      <div class="menu-button" id="instructionsTab" data-action="instructions.view"><i class="fa fa-list"></i> Instructions</div>
+    </div>
+
+    <div id="outputContainer" class="withTabs">
+      <div id="graphic-wrap" class="" style="height: 100%;">
+        <div id="graphic" aria-label="Visual Output" role="application" tabindex="0"><canvas width="600" height="400"></canvas></div><div class="turtle-overlay hide" data-action="graphic.focus" data-interface="output"></div>
+      </div>
+
+      <div id="output-dragbar" class="hide" data-action="resize"></div>
+
+      <div id="console-wrap" class="hide">
+        <div id="console-output" aria-live="assertive" aria-label="Code Output"></div>
+        <a id="reset-output" title="clear output"><i class="fa fa-ban"></i></a>
+      </div>
+
+      <div id="unittest-wrap" class="hide">
+  <div id="unittest-output">
+    <div class="row grey collapse">
+      <div class="small-12 column">
+        <p class="text-center overview" id="test-totals"></p>
+      </div>
+    </div>
+    <ul class="accordion" id="unittest-accordion" data-accordion="">
+    </ul>
+    <div class="row grey collapse">
+      <div class="small-12 column">
+        <p class="text-center overview">Powered by <img src="./trinket-logo.png"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <div id="instructionsContainer" class="hide">
+
+  <div id="instructionsActions" class="hide">
+    <a id="edit-instructions-link"><i class="fa fa-pencil" title="Edit"></i></a>
+  </div>
+  <div id="instructionsToolbar" class="hide">
+    <a class="right" id="save-instructions"><i class="fa fa-save" title="Save"></i></a>
+    <a id="cancel-edit-instructions"><i class="fa fa-times" title="Cancel"></i></a>
+  </div>
+
+  <div id="instructionsOutput"></div>
+</div>
+
+    
+
+  </div>
+
+  
+  <div id="runFirstModal" class="reveal-modal small" data-interface="run-modal" data-reveal="" data-css-top="20" data-offset="200" style="font-size: 1em;">
+    <h2>Run your code first!</h2>
+    <p class="lead">
+      It looks like you haven't tried running your new code.
+    </p>
+    <p>Try clicking
+    <a id="modalRun" class="button tiny" data-action="code.run"><i class="fa fa-play"></i>&nbsp;Run</a>
+    and if you like the result, try sharing again.</p>
+    <a class="close-reveal-modal">×</a>
+  </div>
+
+  <script id="assets-howto-message" type="text/template" style="font-size: 1em;">
+    <p>
+      <span>Images can be used with the <code>turtle</code> module.</span>
+      <pre><code>import turtle
+screen = turtle.Screen()
+# set the screen background
+screen.bgpic("filename.png")
+
+# Or, set the shape of a turtle
+screen.addshape("filename.png")
+tina = turtle.Turtle()
+tina.shape("filename.png")</code></pre>
+    </p>
+  </script>
+  
+
+        </div>
+      </section>
+
+      <a class="exit-off-canvas"></a>
+
+    
+
+    </div>
+  </div>
+
+  
+  <script id="statusMessageTemplate" type="text/html">
+    <div id="statusMessages" aria-live="assertive" role="alert" tabindex=0 data-inteface="alert" data-alert class="alert-box {{type}}">
+      <div>{{message}}</div>
+      <a href="#" title="Close message" class="close" aria-label="Close Alert" role="button"><i class="fa fa-times-circle"></i></a>
+    </div>
+  </script>
+  
+
+  <!-- the response-indicator divs allow javascript to determine which responsive size is being applied -->
+  <div class="responsive-indicator show-for-small-only" data-size="small"></div>
+  <div class="responsive-indicator show-for-medium-only" data-size="medium"></div>
+  <div class="responsive-indicator show-for-large-up" data-size="large"></div>
+
+  
+
+  <div id="confirmResetModal" class="reveal-modal medium" data-reveal="" data-css-top="35">
+    <div class="row">
+      <h2 id="modalTitle">Are you sure?</h2>
+      <p class="lead">Resetting will undo all of your current changes.</p>
+      <a class="button caution menu-button allow-original" data-action="code.cancel-reset">Cancel</a>
+      <a class="button danger menu-button allow-original" data-action="code.confirm-reset">Yes, I am sure.</a>
+      <a class="close-reveal-modal" aria-label="Close">×</a>
+    </div>
+  </div>
+
+  <div id="controlRoomModal" class="reveal-modal large" data-reveal="" data-css-top="35" data-interface="control-room">
+    <p><strong>Broadcast Control Room</strong></p>
+  
+    <a class="close-reveal-modal" aria-label="Close">×</a>
+  </div>
+
+  
+
+  
+
+  <div id="upgradeModal" class="reveal-modal full" data-reveal="" data-css-top="0" data-offset="0">
+    
+    
+    <a class="close-reveal-modal">×</a>
+  </div>
+
+  
+
+
+  <div id="settingsModal" class="reveal-modal medium" data-reveal="" data-interface="settings" data-css-top="35">
+    <h3><strong>Trinket Settings</strong></h3>
+    
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="switch round left">
+          <input id="autofocusEnabled" type="checkbox" name="autofocusEnabled" checked="checked" data-trinket-settings="">
+          <label for="autofocusEnabled"></label>
+        </div>
+        <h5 class="left">Enable Editor Autofocus</h5>
+      </div>
+    </div>
+    
+    <h3><strong>Global Settings</strong></h3>
+    <div class="row">
+      <div class="small-12 columns">
+        <div class="switch round left">
+          <input id="lineWrapping" type="checkbox" name="lineWrapping" checked="checked">
+          <label for="lineWrapping"></label>
+        </div>
+        <h5 class="left">Enable Line Wrapping</h5>
+      </div>
+    </div>
+    <!--
+    Theme:
+    Light: "xcode"
+    Light HC: "crimson_editor"
+    Dark: "pastel_on_dark"
+    Dark HC: "vibrant_ink"
+
+    I think there could be a better HC dark theme than this, although I think this is the best of the presets.
+    Also maybe consider adding color blind themes like what github has at https://github.com/settings/appearance
+    -->
+    <h3><strong>Python Settings</strong></h3>
+    <div class="row">
+      <div class="small-12 columns">
+        <h5 class="">Indentation Amount</h5><h6>(Doesn't update existing code!)</h6>
+          <select id="indentationAmount" width="20%">
+            <option value="2" selected="">2 spaces</option>
+            <option value="4">4 spaces</option>
+          </select>
+          <label for="indentationAmount"></label>
+      </div>
+    </div>
+    
+  </div>
+
+
+
+
+  <ul id="share-options" class="f-dropdown" data-dropdown-content="" role="menu">
+    <li role="menuitem"><a class="menu-button" data-action="sharing.email" role="button"><i class="fa fa-envelope"></i>Email</a></li>
+    <li role="menuitem"><a class="menu-button" data-action="sharing.share" role="button"><i class="fa fa-link"></i>Link</a></li>
+    <li role="menuitem"><a class="menu-button" data-action="sharing.embed" role="button"><i class="fa fa-code"></i>Embed</a></li>
+    
+    <li><a class="menu-button" data-action="mode.download"><i class="fa fa-download"></i>Download</a></li>
+    
+  </ul>
+
+  <ul id="group-share-options" class="f-dropdown" data-dropdown-content="">
+    <li><a class="menu-button" data-action="sharing.group"><i class="fa fa-users"></i>with Group</a></li>
+  </ul>
+
+  
+
+<ul id="run-options" class="f-dropdown" data-dropdown-content="">
+  <li><a class="menu-button" data-action="code.run" data-button="run"><i class="fa fa-play"></i>Run</a></li>
+  <li><a class="menu-button" data-action="code.console" data-button="console"><i class="fa fa-terminal"></i>Console</a></li>
+</ul>
+
+
+
+  
+  <script id="restoreOriginalModalTemplate" type="text/html">
+    <div id="restoreOriginalModal" class="reveal-modal medium" data-reveal data-css-top="35">
+      <h2 id="modalTitle">Reset to the original?</h2>
+      <p class="lead">Resetting will undo all of your current changes.</p>
+      <a class="button small caution" data-action="reject">No, keep my remix.</a>
+      <a class="button small danger" data-action="confirm">Yes, reset to the original.</a>
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+  </script>
+
+  <script id="unittest-error" type="text/template">
+    <li class="accordion-navigation">
+    <a href="#panel-{{testNumber}}">
+      <div class="row really-wrong">
+        <div class="small-9 column">
+          <p><i class="fa fa-angle-right fa-lg open-close-indicator"></i>{{shortDescription}}</p>
+        </div>
+        <div class="small-3 column">
+        <p class="text-center"><i class="fa fa-circle-o fa-lg"></i></p>
+        </div>
+      </div>
+    </a>
+    <div id="panel-{{testNumber}}" class="content">
+      <p>
+        <strong>Message:</strong> <pre>{{reason}}</pre>
+      </p>
+    </div>
+    </li>
+  </script>
+
+  <script id="unittest-fail" type="text/template">
+    <li class="accordion-navigation">
+    <a href="#panel-{{testNumber}}">
+      <div class="row really-wrong">
+        <div class="small-1 column text-centered">
+          <p><i class="fa fa-angle-right fa-lg open-close-indicator"></i></p>
+        </div>
+        <div class="small-9 column">
+          <p>{{shortDescription}}</p>
+        </div>
+        <div class="small-2 column">
+        <p class="text-center"><i class="fa fa-circle-o fa-lg"></i></p>
+        </div>
+      </div>
+    </a>
+    <div id="panel-{{testNumber}}" class="content">
+      <p>
+        <strong>Description:</strong> {{description}}
+      </p>
+      <p>
+        <strong>Message:</strong> {{reason}}
+      </p>
+    </div>
+    </li>
+  </script>
+
+  <script id="unittest-pass" type="text/template">
+    <li class="accordion-navigation">
+    <a href="#panel-{{testNumber}}">
+      <div class="row really-right">
+        <div class="small-1 column text-centered">
+          <p><i class="fa fa-angle-right fa-lg open-close-indicator"></i></p>
+        </div>
+        <div class="small-9 column">
+          <p>{{shortDescription}}</p>
+        </div>
+        <div class="small-2 column">
+        <p class="text-center"><i class="fa fa-check-circle fa-lg"></i></p>
+        </div>
+      </div>
+    </a>
+    <div id="panel-{{testNumber}}" class="content">
+      <p>
+        <strong>Description:</strong> {{description}}
+      </p>
+    </div>
+    </li>
+  </script>
+
+  <script id="guestMenuTemplate" type="text/html">
+    <li>
+      <form id="accountForm">
+        <span class='message hide'></span>
+        <input name="email"    type='email'    placeholder="Email"    required>
+        <input name="password" type='password' placeholder="Password" required>
+        <a id="login"    name="login"    class='button secondary small' data-action="login">Log In</a>
+        <!--<a id="register" name="register" class='button primary small'   data-action="signup">Create Account</a>-->
+      </form>
+    </li>
+  </script>
+
+  <script id="userMenuTemplate" type="text/html">
+    
+
+  </script>
+
+  
+
+  <script id="draftTextTemplate" type="text/html">
+    <a class="menu-button" data-action="code.reset" title="Reset"><i class="fa fa-refresh"></i></a> {{draftText}}
+  </script>
+
+  <script id="addInstructionsTemplate" type="text/html">
+    <p>Click the pencil icon to add instructions to your trinket. When anyone else views this trinket, they'll also be able to view them.</p>
+  </script>
+
+  <script id="editInstructionsTemplate" type="text/html">
+    <div id="embedded-instructions"></div>
+  </script>
+
+  <script id="addInlineCommentTemplate" type="text/html">
+    <div class="comment-wrapper">
+      <div class="comment-heading-container">
+        <div class="comment-avatar-container">
+          <img class="comment-avatar" src="{{avatar}}" width="40" height="40" />
+        </div>
+        <span class="new-comment-container">
+          <textarea class="inline-comment-text"></textarea>
+        </span>
+      </div>
+      <div class="new-comment-actions">
+        <a class="button tiny secondary save-inline-comment"><i class="fa fa-save"></i> Add Comment</a>
+        <a class="button tiny caution cancel-inline-comment">Cancel</a>
+      </div>
+    </div>
+  </script>
+
+  <script id="inlineCommentTemplate" type="text/html">
+    <div id="{{commentId}}" class="comment-wrapper">
+      <div class="comment-heading-container">
+        <div class="comment-avatar-container">
+          <img class="comment-avatar" src="{{avatar}}" width="40" height="40" />
+        </div>
+        <div class="comment-info-container">
+          <strong>{{username}}</strong>
+          {{commentActions}}
+        </div>
+      </div>
+      <div id="comment-container-{{commentId}}" class="comment-container">
+        {{comment}}
+      </div>
+      <div id="edit-comment-container-{{commentId}}" class="edit-comment-container hide">
+        <textarea id="edit-inline-comment-{{commentId}}" class="inline-comment-text"></textarea>
+      </div>
+    </div>
+  </script>
+
+  <script id="inlineCommentActions" type="text/html">
+    <div class="comment-actions-wrapper">
+      <a class="comment-actions move-comment-up disabled" data-file-index="{{index}}" data-comment-id="{{commentId}}" title="Move comment up"><i class="fa fa-angle-up"></i></a>
+      <a class="comment-actions move-comment-down disabled" data-file-index="{{index}}" data-comment-id="{{commentId}}" title="Move comment down"><i class="fa fa-angle-down"></i></a>
+      <a class="comment-actions" data-dropdown="comment-actions-{{commentId}}" title="More options"><i class="fa fa-ellipsis-v"></i></a>
+    </div>
+    <ul id="comment-actions-{{commentId}}" class="f-dropdown" data-dropdown-content>
+      <li><a class="edit-inline-comment" data-comment-id="{{commentId}}"><i class="fa fa-pencil fa-fw"></i> Edit comment</a></li>
+      <li><a class="confirm-remove-inline-comment" data-comment-id="{{commentId}}"><i class="fa fa-trash-o alert fa-fw"></i> Remove comment</a></li>
+    </ul>
+    <div class="confirm-remove-comment-container hide" id="confirm-remove-comment-container-{{commentId}}">
+      <strong>Remove this comment?</strong><br /><br />
+      <a class="confirm-remove-comment button tiny danger" data-file-index="{{index}}" data-comment-id="{{commentId}}"><i class="fa fa-trash-o"></i> Remove</a>
+      <a class="cancel-remove-comment button tiny caution" data-comment-id="{{commentId}}">Cancel</a>
+    </div>
+    <div class="update-comment-container hide" id="update-comment-container-{{commentId}}">
+      <a class="update-comment button tiny secondary" data-file-index="{{index}}" data-comment-id="{{commentId}}"><i class="fa fa-save"></i> Update</a>
+      <a class="cancel-update-comment button tiny caution" data-comment-id="{{commentId}}">Cancel</a>
+    </div>
+  </script>
+  <script id="inlineCommentDismiss" type="text/html">
+    <div class="comment-actions-wrapper">
+      <a class="comment-actions" data-dropdown="comment-actions-{{commentId}}"><i class="fa fa-ellipsis-v"></i></a>
+    </div>
+    <ul id="comment-actions-{{commentId}}" class="f-dropdown" data-dropdown-content>
+      <li><a class="confirm-remove-inline-comment" data-comment-id="{{commentId}}"><i class="fa fa-trash-o alert fa-fw"></i> Remove comment</a></li>
+    </ul>
+    <div class="confirm-remove-comment-container hide" id="confirm-remove-comment-container-{{commentId}}">
+      <strong>Remove this comment?</strong><br /><br />
+      <a class="confirm-remove-comment button tiny danger" data-file-index="{{index}}" data-comment-id="{{commentId}}"><i class="fa fa-trash-o"></i> Remove</a>
+      <a class="cancel-remove-comment button tiny caution" data-comment-id="{{commentId}}">Cancel</a>
+    </div>
+  </script>
+  
+
+  
+
+  <script src="./localStorage.min.js" type="text/javacript"></script>
+
+  
+  <script src="./jszip.min.js" charset="utf-8"></script>
+  <script src="./jszip-utils.min.js" charset="utf-8"></script>
+  <!--[if IE]>
+  <script src="/cache-prefix-1751121490697dist/jszip-utils-ie.min.js" type="text/javascript"></script>
+  <![endif]-->
+  <script src="./FileSaver.js" charset="utf-8"></script>
+  
+
+  <script src="./lodash.min.js" charset="utf-8"></script>
+  <script src="./bluebird.min.js" charset="utf-8"></script>
+  <script src="./moment.min.js" type="text/javascript"></script>
+
+  
+
+  
+  <script src="./three.min.js"></script>
+  <script src="./GLTFLoader.js"></script>
+  <script src="./OrbitControls.js"></script>
+  <script src="./DRACOLoader.js"></script>
+  <script src="./RoomEnvironment.js"></script>
+
+  
+  <script src="./sockjs.min.js"></script>
+  
+  <script src="./ace(1).js" charset="utf-8"></script>
+  <script src="./ext-modelist.js" charset="utf-8"></script>
+  <script src="./ext-language_tools.js" charset="utf-8"></script>
+  
+
+  <script type="text/javascript" src="./diff_match_patch.js"></script>
+  <script type="text/javascript" src="./dropzone.min.js"></script>
+  
+
+  <script type="text/javascript" src="./rangeslider.min.js"></script>
+
+  
+  <script src="./socket.io.min.js"></script>
+  
+
+  
+  <script type="text/javascript" src="./50e5bcc6-skulpt.min.js"></script>
+  <script type="text/javascript" src="./50e5bcc6-skulpt-stdlib.js"></script>
+  
+
+  
+  <script src="./marked.js"></script>
+  
+
+  <script src="./traqball.js"></script>
+
+  <script src="./jquery-ui.min.js" charset="utf-8"></script>
+
+  
+
+  <script src="./highlight.min.js"></script>
+  <script src="./trinket-config.js"></script>
+  <script src="./trinket-markdown.js"></script>
+  <script src="./html-to-image.js"></script>
+
+  <script type="text/javascript">
+    window.trinketSocketConfig = {
+        protocol         : 'https'
+      , port             : ''
+      , hostname         : 'pysocket.trinket.io'
+      , autocompletePath : '/autocomplete'
+      , enabled          : 'false'
+    };
+  </script>
+
+  <script src="./diff.js" charset="utf-8"></script>
+
+  
+  <script src="./embed-python-09c42d33c6.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    window.trinketBroadcast = {
+        token      : 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0aW1lc3RhbXAiOjE3NTExMjE0OTA2ODIsInVzZXJOYW1lIjoia2FudGVsIiwidXNlcklkZW50aWZpZXIiOiI2MmI3MzIwMTA1NTI4NzJhMGU0Yzg4ZTIiLCJjYW5TdGFydEJyb2FkY2FzdCI6ZmFsc2UsImlhdCI6MTc1MTEyMTQ5MH0.YE6sKMbLkxV17RPCRCM13YjXu4mse_Xe7m2_bd8m7UU'
+      , connection : TrinketIO.import('trinket.broadcast.connection')
+    };
+    window.senseHatConfig = {};
+
+window.senseHatConfig2021 = {};
+
+  </script>
+
+  
+
+
+
+
+
+<div class="tab-options" role="button"><ul><li><a class="file-remove-link menu-button" data-action="file.remove"><i class="fa fa-trash"></i></a></li><li><a class="file-rename-link menu-button" data-action="file.rename"><i class="fa fa-pencil"></i></a></li></ul></div><div class="editor-tooltip" style="display: none;"></div><script type="text/javascript" src="./processing-sk-min.js" async=""></script><script type="text/javascript" src="./processing.min.js" async=""></script><span style="position: absolute; left: 0px; opacity: 0; font-family: PjsEmptyFont, fantasy;">AAAAAAAA</span></body></html>
