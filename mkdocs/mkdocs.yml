@@ -1,0 +1,61 @@
+site_name: Python Curiosa
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-7
+        name: Light Mode
+      primary: indigo
+      accent: deep orange
+  # Light Mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-4
+        name: Dark Mode
+      primary: indigo
+      accent: deep orange  
+  features:
+    - content.code.copy
+    - navigation.footer
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
+  language: de
+copyright: <i>(<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>) 2025 by Jörg Kantel</i>
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.smartsymbols
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: python/name:pymdownx.superfences.fence_code_format
+  - footnotes 
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+extra_css:
+  - css/user.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+extra:
+  generator: false
+nav:
+- "index.md"
+- "firststepsproceso/index.md"

@@ -9,7 +9,7 @@ p5 = Sketch()
 colors = [(8, 247, 254), (254, 83, 187), (245, 211, 0),
           (0, 255, 65), (250, 25, 25), (148, 103, 89)]
 
-bg2: object  # Declare variable 'bg2'
+# bg2: object  # Declare variable 'bg2'
 particles = []
 
 def preload():
