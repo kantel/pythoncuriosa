@@ -1,5 +1,5 @@
 # Startseite
 
-## Python Curiosa – Programmieren für Neugierige
+## Pythonmania – Programmieren für Neugierige
 
 ![](assets/start.png)
